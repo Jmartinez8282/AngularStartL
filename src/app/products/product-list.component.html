@@ -10,7 +10,7 @@
   </div>
   <div class="row">
     <div class="col-md-6">
-      <h4>Filtered by: {{listFilter}}</h4>
+      <h4>Filtered by: {{ listFilter }}</h4>
     </div>
   </div>
   <div class="table-responsive">
@@ -42,11 +42,15 @@
             />
           </td>
           <td>{{ product.productName }}</td>
-          <td>{{ product.productCode |lowercase | convertToSpaces: '-' }}</td>
+          <td>{{ product.productCode | lowercase | convertToSpaces : "-" }}</td>
           <td>{{ product.releaseDate }}</td>
           <td>{{ product.description }}</td>
-          <td>{{ product.price| currency: 'USD': 'symbol': '1.2-2' }}</td>
-          <td><pm-star></pm-star></td>
+          <td>{{ product.price | currency : "USD" : "symbol" : "1.2-2" }}</td>
+          <td><pm-star 
+            [rating]="product.starRating"
+            (ratingClicked)="onRatingClicked($event)"
+            
+            ></pm-star></td>
         </tr>
       </tbody>
     </table>
