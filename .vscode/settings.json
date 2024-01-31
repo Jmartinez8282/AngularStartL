@@ -1,4 +1,8 @@
 {
   "files.autoSave": "afterDelay",
-  "html.format.wrapAttributes": "force-aligned"
+  "html.format.wrapAttributes": "force-aligned",
+  "vscode-pets.petType": "dog",
+  "vscode-pets.petSize": "large",
+  "vscode-pets.petColor": "akita",
+  "vscode-pets.theme": "beach"
 }
